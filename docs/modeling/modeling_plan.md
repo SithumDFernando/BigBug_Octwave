@@ -17,7 +17,21 @@ Given the tabular nature of the dataset and the extreme class imbalance, we will
 4.  **Random Forest**
     *   **Why**: Excellent baseline model. While boosting models often perform better on imbalanced data, RF is highly parallelizable and less prone to overfitting the minority class.
 
-## 3. Addressing the 65:1 Class Imbalance
+## 3. Anomaly Detection Integration (Unsupervised/Semi-Supervised)
+Because fraud detection is fundamentally an anomaly detection problem, we can leverage specialized algorithms designed to find outliers. Since we have labeled data, we will use a **hybrid approach**: generating anomaly scores and feeding them into our supervised models.
+
+1.  **Isolation Forest (ISOF)**
+    *   **How it works**: Isolates anomalies by randomly splitting features. Anomalies require fewer splits to be isolated.
+    *   **Implementation**: Train ISOF and output the anomaly score as a new feature for the tree models.
+2.  **Autoencoders (Neural Networks)**
+    *   **How it works**: Train a neural network to reconstruct *only* the legitimate transactions. When a fraudulent transaction is fed in, the reconstruction error will be high.
+    *   **Implementation**: The reconstruction error becomes a powerful feature for our supervised models to catch "zero-day" (unseen) fraud.
+3.  **One-Class SVM & Local Outlier Factor (LOF)**
+    *   **How it works**: Identifies the density or boundaries of "normal" behavior.
+
+*Strategy: We will train an Isolation Forest on the dataset. The resulting `anomaly_score` will be added to the training set before we run Optuna on our supervised XGBoost/LightGBM models.*
+
+## 4. Addressing the 65:1 Class Imbalance
 The primary challenge in this dataset is the extreme scarcity of fraudulent cases. We will tackle this at two levels:
 
 ### Algorithm-Level Interventions
@@ -51,7 +65,7 @@ We will leverage **Optuna** for automated Bayesian optimization to efficiently t
     *   `depth`: [4, 10]
     *   `l2_leaf_reg`: [1, 10]
 
-## 5. Model Ensembling
+## 6. Model Ensembling
 To achieve the highest possible accuracy and generalization, we will combine the optimally tuned base models.
 
 ### Approach 1: Soft Voting Classifier
@@ -63,7 +77,7 @@ To achieve the highest possible accuracy and generalization, we will combine the
 *   Train a Level-1 Meta-Learner (typically a Logistic Regression or a shallow, heavily regularized tree model) on the out-of-fold predictions from Level-0.
 *   This approach often squeezes out an extra 1-3% in PR-AUC by learning the specific biases of the base models.
 
-## 6. Evaluation Protocol
+## 7. Evaluation Protocol
 *   **Cross-Validation Strategy**: We strictly enforce **Stratified K-Fold (k=5 or 10)** splitting. This ensures that the 1.51% fraud ratio is maintained consistently across all training and validation folds.
 *   **Primary Metrics**:
     *   **PR-AUC (Precision-Recall AUC)**: The absolute best metric for extreme class imbalance.
@@ -72,7 +86,7 @@ To achieve the highest possible accuracy and generalization, we will combine the
     *   **Recall (Sensitivity)**: How many actual frauds did we catch? (Crucial for minimizing financial loss).
     *   **Precision**: When we flag a transaction as fraud, how often are we right? (Crucial for minimizing customer friction).
 
-## 7. Implementation Roadmap
+## 8. Implementation Roadmap
 1.  **Script `src/modeling/train.py`**:
     *   Setup the Optuna objective functions for XGBoost, LightGBM, and CatBoost.
     *   Integrate Stratified K-Fold CV.
