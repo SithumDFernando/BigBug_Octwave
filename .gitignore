@@ -1,0 +1,29 @@
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE Configurations
+.vscode/
+.idea/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Large Data & Artifacts (Keep directory structures via .gitkeep)
+models/*
+!models/.gitkeep
+outputs/*
+!outputs/.gitkeep
