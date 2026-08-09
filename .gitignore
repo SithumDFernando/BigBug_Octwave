@@ -23,7 +23,7 @@ __pycache__/
 Thumbs.db
 
 # Large Data & Artifacts (Keep directory structures via .gitkeep)
-models/*
-!models/.gitkeep
-outputs/*
-!outputs/.gitkeep
+# models/*
+# !models/.gitkeep
+# outputs/*
+# !outputs/.gitkeep
