@@ -1,8 +1,10 @@
 import pandas as pd
+import os
 
 def analyze():
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     print("--- Train Data ---")
-    train_df = pd.read_csv('data/raw/train.csv')
+    train_df = pd.read_csv(os.path.join(base_dir, 'data', 'raw', 'train.csv'))
     print("Shape:", train_df.shape)
     print("\nMissing values:\n", train_df.isnull().sum())
     print("\nData types:\n", train_df.dtypes)
@@ -11,7 +13,7 @@ def analyze():
     print("\nMerchant Category counts:\n", train_df['merchant_category'].value_counts())
     
     print("\n--- Test Data ---")
-    test_df = pd.read_csv('data/raw/test.csv')
+    test_df = pd.read_csv(os.path.join(base_dir, 'data', 'raw', 'test.csv'))
     print("Shape:", test_df.shape)
     print("\nMissing values:\n", test_df.isnull().sum())
 

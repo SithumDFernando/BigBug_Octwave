@@ -43,7 +43,7 @@ def engineer_features(df):
 def preprocess_and_save():
     print("Starting Feature Engineering Pipeline...")
     
-    base_dir = r"c:\Users\ADMIN\Desktop\BigBug_Octwave"
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     processed_dir = os.path.join(base_dir, "data", "processed")
     os.makedirs(processed_dir, exist_ok=True)
     
