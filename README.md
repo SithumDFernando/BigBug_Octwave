@@ -34,6 +34,7 @@ flowchart LR
 
 | Document | Description |
 |---|---|
+| [Docs Index](docs/README.md) | Complete directory index for all project documentation |
 | [Project Summary](docs/project_summary.md) | Full methodology with architecture diagrams, feature engineering details, model comparison, and ensemble strategy |
 | [Technical Brief](docs/reference/technical_brief.md) | Competition rules, dataset specification, and evaluation criteria |
 
@@ -45,8 +46,13 @@ BigBug_Octwave/
 │   ├── raw/                 # train.csv, test.csv, sample_submission.csv
 │   └── processed/           # Processed datasets / extracted features
 ├── docs/
-│   ├── reference/           # technical_brief.md & administrative_rules.md
-│   └── project_summary.md   # Full methodology & architecture overview
+│   ├── README.md            # Documentation index & map
+│   ├── project_summary.md   # Full methodology & architecture overview
+│   ├── data_cleaning/       # Data cleaning strategy & validation
+│   ├── feature_engineering/ # Feature engineering methodology
+│   ├── modeling/            # Modeling strategy & cross-validation results
+│   ├── reports/             # Evaluation & overfitting analysis reports
+│   └── reference/           # Official technical brief & competition rules
 ├── models/                  # Saved model artifacts (.pkl)
 ├── src/                     # Python source code
 │   ├── data_processing/     # Data analysis and preprocessing scripts
@@ -54,7 +60,7 @@ BigBug_Octwave/
 │   └── modeling/            # Model training and ensemble scripts
 ├── notebooks/               # Jupyter notebooks (EDA → Preprocessing → Training → Evaluation)
 ├── outputs/                 # Final submission CSV files
-├── README.md                # This file
+├── README.md                # Main repository README
 └── requirements.txt         # Package dependencies
 ```
 
