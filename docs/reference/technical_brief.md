@@ -89,13 +89,14 @@ BigBug_Octwave/
 │   ├── raw/                 # train.csv, test.csv, sample_submission.csv
 │   └── processed/           # Processed datasets / extracted features
 ├── docs/
-│   └── reference/           # technical_brief.md & administrative_rules.md
+│   ├── reference/           # technical_brief.md & administrative_rules.md
+│   └── project_summary.md   # Full methodology & architecture overview
 ├── models/                  # Saved model artifacts (.pkl, .bin, etc.)
 ├── src/                     # Python source code
-│   ├── preprocess.py        # Data loading, encoding & feature engineering
-│   ├── train.py             # Model training & cross-validation script
-│   └── predict.py           # Inference script generating final submission CSV
-├── notebooks/               # Jupyter notebooks for EDA and experimentation
+│   ├── data_processing/     # Data analysis and preprocessing scripts
+│   ├── inference/           # Inference scripts for predicting on the test set
+│   └── modeling/            # Model training and ensemble scripts
+├── notebooks/               # Jupyter notebooks for EDA, Experimentation & Final Evaluation
 ├── outputs/                 # Final submission CSV files
 ├── README.md                # Environment setup & reproduction instructions
 └── requirements.txt         # Package dependencies & exact versions
