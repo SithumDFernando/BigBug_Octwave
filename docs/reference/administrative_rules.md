@@ -1,31 +1,25 @@
-# Competition Rules
+# OctWave 3.0 - Administrative & Foundational Rules
 
-## OctWave 3.0 - Credit Card Fraud Detection Challenge
+## 1. Organizers & Contact
+- **Organizing Committee:** OctWave 3.0 Organizing Committee — IEEE Industry Applications Society Student Branch Chapter, University of Moratuwa.
+- **Competition Link:** The Kaggle competition link will be shared in the WhatsApp group at 12:00 NOON on 9th August 2026.
 
-### 1. Competition Overview
-This competition provides participants with hands-on experience in solving real-world machine learning problems. The goal is to build a classification model that accurately detects fraudulent credit card transactions `is_fraud` using the provided dataset.
+## 2. Team Naming & Limits
+- **Official Team Names:** All teams and individual participants MUST set their Kaggle team name to match the official name assigned to them by the OctWave 3.0 Organizing Committee (OC). Submissions made under non-assigned, custom, or modified team names will be disqualified.
+- **Team Size:** Participants may compete individually or in teams of up to 4 members.
+- **Account Rules:** Each participant can belong to only one team using a single Kaggle account. Falsifying accounts or joining multiple teams will result in immediate disqualification.
 
-### 2. Mandatory Team Naming & Limits
-- **Official Team Names**: All teams and individual participants MUST set their Kaggle team name to match the official name assigned to them by the OctWave 3.0 Organizing Committee (OC). Submissions made under non-assigned, custom, or modified team names will be disqualified.
-- **Team Size**: Participants may participate individually or in teams of up to 4 members.
-- **Account Rules**: Each participant can belong to only one team using a single Kaggle account. Falsifying accounts or joining multiple teams will result in immediate disqualification.
+## 3. Code & Dataset Sharing Rules
+- **Dataset Restrictions:** The competition dataset may only be used for this event and must not be redistributed.
+- **Code Sharing:** Private sharing of code or prediction files outside of officially merged teams is not permitted. Any public code sharing must be posted on the competition discussion forum/notebooks.
 
-### 3. Submission Rules
-- **Daily Submissions**: Maximum of 10 submissions per day.
-- **Evaluation Metric**: Submissions will be scored using the F1-score metric to properly account for class imbalance in fraud detection.
-- **Final Evaluation**: Participants may select up to 2 submissions for final Private Leaderboard scoring.
-
-### 4. Dataset Usage
-- **Dataset Restrictions**: The competition dataset may only be used for this event and must not be redistributed.
-- **External Data**: The use of private datasets or external resources that provide an unfair advantage is strictly prohibited.
-- **Code Sharing**: Private sharing of code or prediction files outside of officially merged teams is not permitted. Any public code sharing must be posted on the competition discussion forum/notebooks.
-
-### 5. Winner Requirements
-To claim rankings or prizes, top-performing participants will be required to submit: 
-- Complete, reproducible source code and environment details. 
+## 4. Winner Verification Requirements
+To claim rankings or prizes, top-performing participants will be required to submit:
+- Complete, reproducible source code and environment details.
 - A brief overview of model methodology, data preprocessing, and training steps.
+- Verification of compliance with the official assigned team name.
 
-### 6. Organizer Rights
+## 5. Organizer Rights
 The organizers reserve the right to review submissions, verify compliance with competition rules, and disqualify submissions that violate the rules.
 
 ---
