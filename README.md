@@ -55,6 +55,7 @@ BigBug_Octwave/
 │   └── reference/           # Official technical brief & competition rules
 ├── models/                  # Saved model artifacts (.pkl)
 ├── src/                     # Python source code
+│   ├── run_pipeline.py      # End-to-end pipeline orchestrator
 │   ├── data_processing/     # Data analysis and preprocessing scripts
 │   ├── inference/           # Inference scripts for predicting on the test set
 │   └── modeling/            # Model training and ensemble scripts
@@ -68,9 +69,19 @@ BigBug_Octwave/
 
 ### 1. Environment Setup
 
-Python 3.11+ is required. Install all dependencies:
+Python 3.11+ is required. We strongly recommend creating a virtual environment before installing dependencies:
 
+**Windows:**
 ```bash
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**macOS / Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -88,6 +99,14 @@ The entire pipeline is documented end-to-end across 4 polished Jupyter notebooks
 The final submission files are saved to `outputs/from_notebook/submission.csv`.
 
 ### 3. Alternative: Running via Python Scripts
+
+You can execute the entire pipeline (Preprocessing → Training → Ensembling → Inference) sequentially using the orchestrator script in the `src` folder:
+
+```bash
+python src/run_pipeline.py
+```
+
+Alternatively, you can run each script individually:
 
 ```bash
 # 1. Preprocess the data
