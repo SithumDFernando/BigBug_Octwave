@@ -13,3 +13,32 @@ GaussianNB,0.9415,0.3021,0.3863,0.1852,0.8263,"{'var_smoothing': 0.0093282728156
 MLPClassifier,0.9949,0.8330,0.9052,0.8246,0.8427,"{'hidden_layer_sizes': (50, 50), 'alpha': 0.08457998115927555}",models/mlpclassifier/best_model.pkl,outputs/mlpclassifier/predictions.csv
 Ensemble_SoftVoting,0.9999,0.9959,0.9991,1.0000,0.9917,"{'w_ada': 0.2842978169539977, 'w_xgb': 0.42322344857123334, 'w_cat': 0.29247873447476896}",models/ensemble/best_model.pkl,outputs/ensemble/predictions.csv
 Advanced_Stacking_Ensemble,0.9999,0.9959,0.9990,1.0000,0.9917,"{'meta_model': 'LogisticRegression_L2', 'optimal_threshold': np.float64(0.02)}",models/advanced_ensemble/best_model.pkl,outputs/advanced_ensemble/predictions.csv
+LogisticRegression,0.9926,0.8026,0.8913,0.6791,0.9837,"{'C': 8.958947820320029}",models/logisticregression/best_model.pkl,outputs/logisticregression/predictions.csv
+RandomForest,0.9957,0.8423,0.9180,0.9485,0.7607,"{'n_estimators': 199, 'max_depth': 7}",models/randomforest/best_model.pkl,outputs/randomforest/predictions.csv
+ExtraTrees,0.9950,0.8210,0.8871,0.8837,0.7760,"{'n_estimators': 153, 'max_depth': 11}",models/extratrees/best_model.pkl,outputs/extratrees/predictions.csv
+XGBoost,0.9998,0.9917,1.0000,1.0000,0.9837,"{'learning_rate': 0.2781403812458871, 'max_depth': 5}",models/xgboost/best_model.pkl,outputs/xgboost/predictions.csv
+LightGBM,0.9994,0.9789,0.9856,1.0000,0.9587,"{'learning_rate': 0.054277943172960155, 'max_depth': 8}",models/lightgbm/best_model.pkl,outputs/lightgbm/predictions.csv
+CatBoost,0.9996,0.9876,1.0000,0.9840,0.9917,"{'learning_rate': 0.08312988847002399, 'depth': 6}",models/catboost/best_model.pkl,outputs/catboost/predictions.csv
+AdaBoost,0.9999,0.9957,0.9991,1.0000,0.9917,"{'n_estimators': 186, 'learning_rate': 0.7498007874345735}",models/adaboost/best_model.pkl,outputs/adaboost/predictions.csv
+GradientBoosting,0.9991,0.9707,0.9831,0.9833,0.9587,"{'n_estimators': 60, 'learning_rate': 0.0726693404498771, 'max_depth': 5}",models/gradientboosting/best_model.pkl,outputs/gradientboosting/predictions.csv
+LogisticRegression,0.9928,0.8052,0.8954,0.6829,0.9837,"{'C': 9.858372578479106}",models/logisticregression/best_model.pkl,outputs/logisticregression/predictions.csv
+RandomForest,0.9953,0.8297,0.9056,0.9065,0.7690,"{'n_estimators': 92, 'max_depth': 7}",models/randomforest/best_model.pkl,outputs/randomforest/predictions.csv
+ExtraTrees,0.9953,0.8308,0.8888,0.8924,0.7843,"{'n_estimators': 143, 'max_depth': 11}",models/extratrees/best_model.pkl,outputs/extratrees/predictions.csv
+XGBoost,0.9998,0.9915,0.9994,1.0000,0.9833,"{'learning_rate': 0.16392790475628496, 'max_depth': 5}",models/xgboost/best_model.pkl,outputs/xgboost/predictions.csv
+LightGBM,0.9994,0.9784,0.9979,1.0000,0.9583,"{'learning_rate': 0.13979596672685934, 'max_depth': 6}",models/lightgbm/best_model.pkl,outputs/lightgbm/predictions.csv
+CatBoost,0.9996,0.9877,0.9997,0.9843,0.9917,"{'learning_rate': 0.016210733885319448, 'depth': 4}",models/catboost/best_model.pkl,outputs/catboost/predictions.csv
+AdaBoost,0.9999,0.9957,0.9997,1.0000,0.9917,"{'n_estimators': 108, 'learning_rate': 0.7600995300491756}",models/adaboost/best_model.pkl,outputs/adaboost/predictions.csv
+LogisticRegression,0.9926,0.8026,0.8945,0.6791,0.9837,"{'C': 8.657627939675649}",models/logisticregression/best_model.pkl,outputs/logisticregression/predictions.csv
+RandomForest,0.9950,0.8200,0.8952,0.9042,0.7527,"{'n_estimators': 82, 'max_depth': 7}",models/randomforest/best_model.pkl,outputs/randomforest/predictions.csv
+ExtraTrees,0.9948,0.8144,0.8831,0.8732,0.7677,"{'n_estimators': 117, 'max_depth': 11}",models/extratrees/best_model.pkl,outputs/extratrees/predictions.csv
+XGBoost,0.9998,0.9917,1.0000,1.0000,0.9837,"{'learning_rate': 0.28344615551120556, 'max_depth': 5}",models/xgboost/best_model.pkl,outputs/xgboost/predictions.csv
+LightGBM,0.9995,0.9832,0.9862,1.0000,0.9670,"{'learning_rate': 0.06629748715462999, 'max_depth': 8}",models/lightgbm/best_model.pkl,outputs/lightgbm/predictions.csv
+CatBoost,0.9996,0.9877,0.9993,0.9843,0.9917,"{'learning_rate': 0.05433159759542137, 'depth': 8}",models/catboost/best_model.pkl,outputs/catboost/predictions.csv
+AdaBoost,0.9999,0.9957,1.0000,1.0000,0.9917,"{'n_estimators': 187, 'learning_rate': 0.4585916372949062}",models/adaboost/best_model.pkl,outputs/adaboost/predictions.csv
+GradientBoosting,0.9991,0.9706,0.9950,0.9833,0.9587,"{'n_estimators': 144, 'learning_rate': 0.1563008619062925, 'max_depth': 6}",models/gradientboosting/best_model.pkl,outputs/gradientboosting/predictions.csv
+SVC,0.9948,0.8205,0.8767,0.8383,0.8087,"{'C': 9.78321588410357}",models/svc/best_model.pkl,outputs/svc/predictions.csv
+KNN,0.9894,0.5452,0.5678,0.7551,0.4363,"{'n_neighbors': 4, 'weights': 'distance'}",models/knn/best_model.pkl,outputs/knn/predictions.csv
+GaussianNB,0.9415,0.3021,0.3855,0.1852,0.8263,"{'var_smoothing': 0.0037988728390389187}",models/gaussiannb/best_model.pkl,outputs/gaussiannb/predictions.csv
+MLPClassifier,0.9945,0.8111,0.9077,0.8447,0.7843,"{'hidden_layer_sizes': (50, 50), 'alpha': 0.07361951578310934}",models/mlpclassifier/best_model.pkl,outputs/mlpclassifier/predictions.csv
+Ensemble_SoftVoting,0.9999,0.9959,0.9995,1.0000,0.9917,"{'w_ada': 0.14848685963588204, 'w_xgb': 0.45968004541439755, 'w_cat': 0.3918330949497204}",models/ensemble/best_model.pkl,outputs/ensemble/predictions.csv
+Advanced_Stacking_Ensemble,0.9999,0.9959,0.9992,1.0000,0.9917,"{'meta_model': 'LogisticRegression_L2', 'optimal_threshold': np.float64(0.02)}",models/advanced_ensemble/best_model.pkl,outputs/advanced_ensemble/predictions.csv
