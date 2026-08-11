@@ -2,25 +2,14 @@ import zipfile
 import os
 import shutil
 
-try:
-    import nbformat
-    nbs = [
-        'notebooks/01_EDA.ipynb',
-        'notebooks/02_Data_Preprocessing.ipynb',
-        'notebooks/03_Model_Training.ipynb',
-        'notebooks/04_Evaluation_and_Prediction.ipynb'
-    ]
-    merged = nbformat.v4.new_notebook()
-    for f in nbs:
-        nb = nbformat.read(f, as_version=4)
-        merged.cells.extend(nb.cells)
-    final_nb_path = 'TeamBigBug_OctWave_Submission.ipynb'
-    nbformat.write(merged, final_nb_path)
-    print('Merged notebooks successfully.')
-except Exception as e:
-    print('Could not merge notebooks, falling back to 04_Evaluation_and_Prediction.ipynb. Error:', e)
-    final_nb_path = 'TeamBigBug_OctWave_Submission.ipynb'
-    shutil.copy('notebooks/04_Evaluation_and_Prediction.ipynb', final_nb_path)
+source_nb_path = 'notebooks/Working_Submission.ipynb'
+final_nb_path = 'TeamBigBug_OctWave_Submission.ipynb'
+
+if os.path.exists(source_nb_path):
+    shutil.copy(source_nb_path, final_nb_path)
+    print(f'Successfully copied {source_nb_path} to {final_nb_path}.')
+else:
+    print(f'Error: Could not find {source_nb_path}.')
 
 zip_path = 'TeamBigBug_OctWave_Submission.zip'
 with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
